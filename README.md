@@ -6,3 +6,6 @@ In this repository you will find the code of the final degree thesis carried out
 
 ## Graphic-Demo
 Graphic demonstration of the ALBERT, DistilBERT and T5 models by flask. The backend has been developed in python and the frontend in HTML and CSS.
+
+## results
+Evaluation results through rouge-n (1 and 2), rouge-l and BLEU metrics.
