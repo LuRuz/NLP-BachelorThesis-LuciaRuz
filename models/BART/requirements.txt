@@ -1,0 +1,8 @@
+fastai
+transformers<5
+ohmeow-blurr
+blurr
+gcloud
+datasets
+bert-score
+rouge
