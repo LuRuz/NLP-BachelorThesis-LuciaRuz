@@ -1,0 +1,7 @@
+datasets==1.2.1
+pandas
+transformers==4.2.0
+rouge
+rouge_score
+torch==1.7.1
+cuda
