@@ -1,0 +1,6 @@
+transformers==4.2.0
+torch==1.7.1
+cuda
+Summarizer
+SentencePiece
+# git+https://github.com/dmmiller612/bert-extractive-summarizer.git@small-updates

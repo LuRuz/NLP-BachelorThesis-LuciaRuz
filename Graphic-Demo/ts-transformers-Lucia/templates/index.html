@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>Text summarization</title>
+
+		<!-- Custom stlylesheet -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='customStyle.css') }}" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/personalStyle.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/personalStyle.css"> -->
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<script src="https://kit.fontawesome.com/9570985a1e.js" crossorigin="anonymous"></script>
+
+
+		<script>
+			function validateForm(){
+
+				var rv = true;
+				var name = document.forms["passdata"]["name"].value;
+				// var pattern = name.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+				if ( pattern == null ) {
+					rv = false;
+				}	
+				return rv;
+			}	
+		</script>
+	</head>
+	<body>
+		
+		<div style="padding: 5%; padding-bottom: 0;">
+			<div class="title_div" >
+				<center><h2 class="header">Text summarization with Transformers</h2></center>
+			</div>
+		</div>
+		</div>
+			<form name="passdata" action="" method= "POST" style="margin-top: 4%;margin-bottom: 2%;" onsubmit="validateForm()">
+				
+				<div style="height: 50px;">
+					<!-- titulo -->
+					<div class="title_model"> <p style="margin: 0; padding: 0;">Select the model to summarize</p></div>
+					
+					<!-- desplegable -->
+					<select id="selection" name = "selection">
+						<option value="Albert">Albert </option>
+						<option value="Distilbert">Distilbert</option>
+						<option value="T5">T5</option>
+					</select>
+				</div>
+				
+				<!-- inside column1  -->
+				<div class="column" style="float: left;">			
+					<div class="inside_column1">
+						<textarea type="text" name="name" placeholder="Enter here your full text"></textarea>
+						<input type="submit" method="POST" onclick="validateForm()" value="Click to summarize"></input>
+					</div>
+					
+				</div>
+
+				<!-- arrow -->
+				<i class="fas fa-arrow-right big_arrow" ></i>
+
+				<!-- inside column 2 -->
+				<div class="column" style="float: right;">
+					<div class="inside_column2">
+						<p>
+							{{setText}}
+						</p>
+						<p style="font-style:italic;font-weight: bold;">
+							{{setTitle}}
+						</p>
+					</div>
+				</div>
+
+				
+			</form>
+		<div>
+	</body>
+</html>
+
+
