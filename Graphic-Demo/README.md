@@ -13,5 +13,9 @@ pip install -r requirements.txt
 
 Finally, run the program in flask:
 ```
-flask run app.py
+flask run
 ```
+
+This is not a development server. Oper your browser with the port that appears on your console.
+
+Enjoy it!
