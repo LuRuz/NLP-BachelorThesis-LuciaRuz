@@ -6,10 +6,6 @@
 # pip install -r requirements.txt 
 # flask run
 
-
-import re
-import requests                                    
-from bs4 import BeautifulSoup
 from flask import Flask, render_template, request
 
 import lucia_sum as ls
